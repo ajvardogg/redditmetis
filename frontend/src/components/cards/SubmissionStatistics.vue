@@ -3,7 +3,7 @@
         <div v-if="user.analysis.summary.comments.count<=0" class="row justify-content-center mt-3 mb-3" id="no-comments-container"><p>This user has no comments</p></div>
                         <div v-else class="row mt-2" id="comments-container">
                             <div class="col-md-6 col-sm-12 col-12 mb-3">
-                                <!-- COMMENT NUMBERS-->
+                                <!-- SUBMISSION NUMBERS-->
                                 <div class="row d-flex justify-content-center mb-2">
                                     <StatContainer v-for="i in submission_stats" :key="i.key" :m_key="i.key" :value="i.value"/>
                                 </div> 
@@ -11,7 +11,7 @@
                             <div class="col-md-6 col-sm-12 col-12">
                                 <div class="row">
                                     <div class="col d-flex justify-content-center">
-                                        <h2>best comment</h2>
+                                        <h2>best submission</h2>
                                     </div>
                                 </div>
                                 <CommentContainer 
@@ -26,10 +26,10 @@
                                             <span v-if="!truncated.best_submission" v-html="best_submission.title"></span>
                                         </p>
                                 </CommentContainer>
-                                <!-- worst COMMENT -->
+                                <!-- worst SUBMISSION -->
                                 <div class="row mt-3">
                                     <div class="col d-flex justify-content-center">
-                                        <h2>worst comment</h2>
+                                        <h2>worst submission</h2>
                                     </div>
                                 </div>
                                 <CommentContainer
@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="mt-2 col-md-6 col-sm-12 col-12">
-                                <!-- COMMENT NUMBERS-->
+                                <!-- SUBMISSION NUMBERS-->
                                 <div class="row d-flex justify-content-center mb-2">
                                     <h2>top subreddits by number of submissions</h2>
                                 </div> 
@@ -66,7 +66,7 @@
                                 </div> 
                             </div>
                             <div class="mt-2 col-md-6 col-sm-12 col-12">
-                                <!-- COMMENT NUMBERS-->
+                                <!-- SUBMISSION NUMBERS-->
                                 <div class="row d-flex justify-content-center mb-2">
                                     <h2>top subreddits by submission karma</h2>
                                 </div> 
